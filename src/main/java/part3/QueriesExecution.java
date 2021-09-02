@@ -17,9 +17,9 @@ public class QueriesExecution {
 
 
         // ======================= 1.1 - Consulta com filtro ========================================
-        Aluno alunoParaConsulta = alunoDAO.getById(3);
+        //Aluno alunoParaConsulta = alunoDAO.getById(3);
 
-        System.out.println(alunoParaConsulta);
+        //System.out.println(alunoParaConsulta);
 
 
         // =========================== 2 - Inserção =================================================
@@ -33,16 +33,25 @@ public class QueriesExecution {
 
 
         // =========================== 3 - Delete ===================================================
-        //alunoDAO.delete(1);
+        //List<Aluno> alunos = alunoDAO.list();
 
+        //alunos.stream().forEach(System.out::println);
+        //alunoDAO.delete(2);
+
+        //alunos = alunoDAO.list();
+
+        //alunos.stream().forEach(System.out::println);
 
         // =========================== 4 - Atualizar ================================================
-        Aluno alunoParaAtualizar = alunoDAO.getById(3);
-        alunoParaAtualizar.setNome("Joaquim");
-        alunoParaAtualizar.setIdade(18);
-        alunoParaAtualizar.setEstado("RS");
+        Aluno alunoParaAtualizar = alunoDAO.getById(4);
+        alunoParaAtualizar.setNome("Vanessa");
+        alunoParaAtualizar.setIdade(23);
+        alunoParaAtualizar.setEstado("SP");
 
         alunoDAO.update(alunoParaAtualizar);
+        List<Aluno> alunos = alunoDAO.list();
+
+        alunos.stream().forEach(System.out::println);
     }
 
 }
